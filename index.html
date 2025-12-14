@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Sistema administración de condominios, Software Express, Venezuela</title>
+        <meta name="keywords" content="condominios,administración de condominios, sistema de condominios, Aplicaciones online, sistemas en linea, análisis diseño y programación orientada a objetos, adiestramiento Java, consultoria, desarrollos web" />
+       
+        <meta name="description" content="Sistema de administración de condominios. Desarrollo de sistemas orientados a internet. Asesoría y adiestramiento en tegnologías Java Standard edition(JSE) y Java Enterprise edition (JEE)" />
+    
+    
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sl-slide.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/whatsapp-button.css">
+
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/SoftwareExpress/Logo3.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55053309-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+  <header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+          <div class="container">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </a>
+              <a class="pull-left" href="index.html">
+                  <img src = "images/SoftwareExpress/LogoPagina.png" class="logoMargin">
+			  </a>
+			  <a  class="pull-right" href="index.html">
+			      <img src = "images/SoftwareExpress/AplicacionesOnline2.png" class="logoMargin">
+			  </a>
+			  
+			  <br/><br/><br/>
+              <div class="nav-collapse collapse pull-right navBarMargin" id="myNavbar">
+                  <ul class="nav">
+				  <br/>
+                    <li><a id = "navBarScrollSpy" href="#empresa">La Empresa</a></li>
+                    <li><a id = "navBarScrollSpy" href="#productos">Productos</a></li>
+					<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios<i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a   href="#adiestramiento" style = "background-color: #FFFFFF !Important">Condominio Express: adiestramiento y carga inicial</a></li>
+							<li><a href="administracionExpress.html" style = "background-color: #FFFFFF !Important">Administradora Express</a></li>
+                            </ul>
+                    </li>
+                    <li><a  href="https://condominioexpressve.com:8181/CondominioExpress/faces/ContactenosUI.xhtml">Contáctenos</a></li>
+					<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog<i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.condominioexpress.wordpress.com" style = "background-color: #FFFFFF !Important">Condominio Express</a></li>
+						</ul>
+                    </li>
+					<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Condominio Express<i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://condominioexpressve.com:8181/CondominioExpress/faces/BienvenidaUI.xhtml" style = "background-color: #FFFFFF !Important">Entrada al sistema</a></li>
+                            <li><a href="https://condominioexpressve.com:8181/CondominioExpress/faces/TerminosYCondicionesUI.xhtml" style = "background-color: #FFFFFF !Important">Solicitud de Suscripción</a></li>
+                            <li><a href="https://condominioexpressve.com:8181/CondominioExpress/faces/PagoMensualidadUI.xhtml" style = "background-color: #FFFFFF !Important">Registrar pagos</a></li>
+                            <li><a href="tutoriales.html" style = "background-color: #FFFFFF !Important">Videos Tutoriales</a></li>
+                            <li><a href="" style = "background-color: #FFFFFF !Important">...........</a></li>
+                        </ul>
+                    </li>
+					<a class="btn btn-default" href="#pruebaGratuita" role="button" style="color: #FF0000">PRUEBA GRATIS</a>					
+					<a class="btn btn-default" href="Precios.html" role="button" style="color: #FF0000">PRECIOS</a>
+					<a class="btn btn-default" href="https://condominioexpressve.com:8181/CondominioExpress/faces/ConExpAccesoUI.xhtml" role="button" style="color: #FF0000">Consulta Express</a>
+					</ul>
+				
+              </div><!--/.nav-collapse -->
+          </div>
+		  <hr></hr>
+      </div>
+	  
+  </header>
+
+    <!--Slider-->
+
+    <section id="slide-show">
+	
+     <div id="slider" class="sl-slider-wrapper">
+
+        <!--Slider Items-->
+        <div class="sl-slider">
+			
+            <!--Slider Item1-->
+            <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                <div class="sl-slide-inner">
+                    <div class="container">
+                        <img class="pull-right" src="images/sample/slider/img10.png" alt="" />
+                        <h2>Aniversario</h2>
+						<h3>Condominio Express</h3>
+                        <h3>Más de 10 años, en línea</h3>
+						<h3>Servicio 24/7, desde 2013</h3>
+                        <!--<a class="btn btn-large btn-transparent" href="#">Learn More</a>-->
+                    </div>
+                </div>
+            </div>
+            <!--/Slider Item1-->
+
+            <!--Slider Item2-->
+            <div class="sl-slide item2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                <div class="sl-slide-inner">
+                    <div class="container">
+                        <img class="pull-right" src="images/sample/slider/img2.png" alt="" />
+                        <h2>Siempre Atentos</h2>
+                        <h3 class="gap">Nuestros clientes son lo mas importante</h3>
+                        <!--<a class="btn btn-large btn-transparent" href="#">Learn More</a>-->
+                    </div>
+                </div>
+            </div>
+            <!--Slider Item2-->
+
+            <!--Slider Item3-->
+            <div class="sl-slide item3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                <div class="sl-slide-inner">
+                   <div class="container">
+                    <img class="pull-right" src="images/sample/slider/img3.png" alt="" />
+                    <h2>Condominio Express</h2>
+                    <h3 class="gap">Acceso desde cualquier dispositivo</h3>
+                    <!--<a class="btn btn-large btn-transparent" href="#">Learn More</a>-->
+                </div>
+            </div>
+        </div>
+        <!--Slider Item3-->
+		<!--Slider Item4-->
+            <div class="sl-slide item2" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                
+				<div class="sl-slide-inner">
+					<div class="container"><br/><br/><br/><br/><br/><br/>
+						<img class="pull-right" src="images/sample/slider/Administradora Express.png" alt="" />
+						<h2>Administradora Express</h2>
+						<h3 class="gap">Atención en línea</h3>
+					<!--<a class="btn btn-large btn-transparent" href="#">Learn More</a>-->
+					</div>
+				</div>
+			</div>
+        <!--Slider Item4-->
+
+    </div>
+    <!--/Slider Items-->
+
+    <!--Slider Next Prev button-->
+    <nav id="nav-arrows" class="nav-arrows">
+        <span class="nav-arrow-prev"><i class="icon-angle-left"></i></span>
+        <span class="nav-arrow-next"><i class="icon-angle-right"></i></span>
+    </nav>
+    <!--/Slider Next Prev button-->
+
+</div>
+<!-- /slider-wrapper -->
+</section>
+<!--/Slider-->
+
+<!--Services-->
+
+<section id="empresa" class = "main" style="background-color: #FFFFFF">
+
+    <div class="container">
+        <br/><br/><br/><br/><br/>
+        <div class="center gap">
+		     <h3 class = "margin center tituloProductos" style="font-family: 'Fjalla One'">Especialistas en el desarrollo de sistemas de información Web</h3>
+		</div>
+		<div class="span4">
+                <div class="media">
+                    <img src = "images/SoftwareExpress/empresa.png" class="img-rounded imagenes">
+                </div>
+            </div>
+
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-globe icon-medium" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">¿Quiénes somos?</p>
+                        <p>Somos una empresa con una alta especialización en las herramientas y tecnologías más novedosas para la construcción de soluciones automatizadas, basadas en internet y en el modelo SaaS (Software como Servicio).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-thumbs-up-alt icon-medium" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">¿Qué ofrecemos?</p>
+                        <p>Ofrecemos a nuestros clientes, sistemas de alta calidad, al igual que Servicios de adiestramiento y consultoría como expertos en análisis y diseño  de sistemas orientados a objetos, Java Standard Edition (JSE) y la plataforma Java Enterprise Edition (JEE), entre otras.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="gap"></div>
+          <div class="row-fluid">
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-cloud icon-medium icon-rounded" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">Misión</p>
+                        <p>Apoyar a nuestros clientes para que alcancen el éxito en sus negocios, proporcionándoles productos y servicios innovadores de alta calidad, poniendo a su disposición nuestras competencias en el área tecnológica. A nuestros trabajadores, desarrollo profesional y a nuestros accionistas una rentabilidad creciente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-bullseye icon-medium" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">Visión</p>
+                        <p>Ser la empresa proveedora número 1 de aplicaciones online en Venezuela, así como también ser reconocidos como Consultores especialistas en la tecnología Java en general - Java Standard Edition (JSE) y la plataforma Java Enterprise Edition (JEE) -</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-check icon-medium" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">Valores</p>
+                        <p>Orientación al Cliente, Competencias tecnológicas, Compromiso con la calidad, Innovación, Políticas de Investigación y desarrollo, Seriedad, Garantía, Rentabilidad y creación de valor al accionista, Desarrollo Profesional y mejoramiento continuo, Integrados por personas con iniciativa identificados con el proyecto de la compañia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		
+		<div class="gap"></div>
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-cloud icon-medium icon-rounded" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">Video Promocional</p>
+                        <div class="row" style="margin-top: 3%">
+                    <div class="span6">
+                        <iframe width="350" height="180" src="https://www.youtube.com/embed/qMzqokMu1OQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--/Services-->
+
+<section id = "productos" class="main" style="background-color: #ffffff">
+<hr></hr>
+    <div class="container">
+	<br/><br/>
+	
+        <h3 class = "margin center tituloProductos" style="font-family: 'Fjalla One'">Condominio Express</h3>
+		<div class="span4">
+                 <div class="media">
+					<br/>
+                    <img src = "images/SoftwareExpress/imagenPlataforma.jpg" class="img-rounded imagenes">
+                 </div>
+		</div>	
+        
+		<div class="row-fluid">
+		    <div class="media">
+                <div class = "container">
+				<br/>
+                    <h4 style="text-indent: 2%">Plataforma de Tecnología y Servicios online</h4>
+					<br/>
+                    <p class="beneficiosProductos">- Sin instalación, adiestramiento, cuotas anuales por renovación de licencias y sin cuotas de manteniemiento.</p>
+                    <p class="beneficiosProductos">- Opera cien por ciento en internet. </p>
+                    <p class="beneficiosProductos">- Conéctese a nuestro sistema desde cualquier lugar, a cualquier hora.</p>
+					<p class="beneficiosProductos">- 365 dias del año y con acceso desde cualquier dispositivo (Teléfono, laptops, PC, etc)</p>
+                    <p class="beneficiosProductos">- Diseñado tanto para empresas Administradoras como para condominios con auto gestión.</p>
+					<br/>
+			    </div>
+            </div>
+        </div>
+
+		<br/>
+        <div class="row-fluid center">
+		    <a class="btn btn-default" href="tutoriales.html" role="button">Demostración </a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="btn btn-default" href="#pruebaGratuita" role="button" style="color: #FF0000">Prueba GRATIS</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="btn btn-default" href="Precios.html" role="button" style="color: #FF0000">PRECIOS</a>
+        </div>
+
+		<br/><br/><br/>
+		<div class="row-fluid">
+            <div class="span4">
+                <div class="media"> 
+                    <div class="pull-left">
+                        <i class="icon-user icon-medium" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">Condominios con Autogestión</p>
+                        <p>Hágase cargo de la administracion de su condominio de una forma transparente, que genere confianza en su comunidad, que permita auditorias y controles con mayor eficiencia en el uso de los recursos, con una herramienta diseñanda para trabajar en internet.</p>
+					</div>
+			    </div>
+			</div>
+
+			<div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-group icon-medium" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">Administradoras</p>
+                        <p>Los administradores profesionales cuentan ahora con una plataforma de tecnología y servicios ONLINE para seguir contribuyendo con el exito de sus clientes. Con acceso desde cualquier dispositivo, hora y lugar, para una gestión eficiente y moderna.</p>
+                    </div>
+                </div>
+            </div>
+			<div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-dashboard icon-medium" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">Ahorre tiempo</p>
+                        <p>Mediante el uso de nuestra plataforma podrá consultar información actualizada en tiempo real, tanto los administradores como los propietarios, con facilidades de envío de informes en forma inmediata y masiva por correo electrónico, desde el sistema, repercutiendo esto en ahorros de tiempo y recursos como tinta y papel.</p>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+
+		<div class="row-fluid">
+            <div class="span4">
+                <div class="media"> 
+                    <div class="pull-left">
+                        <i class="icon-plus-sign icon-medium" style="background-color: 	#FFFFFF"></i>
+                    </div>
+                    <div class="media-body">
+                        <a class="btn btn-default" href="autogestion.html" role="button" !Important>Más información... </a>
+					</div>
+			    </div> 
+			</div>
+			<div class="span4">
+                <div class="media"> 
+                    <div class="pull-left">
+                        <i class="icon-plus-sign icon-medium" style="background-color: 	#FFFFFF"></i>
+                    </div>
+                    <div class="media-body">
+                        <a class="btn btn-default" href="administradoras.html" role="button" !Important>Más información... </a>
+					</div>
+			    </div> 
+			</div>
+		</div>
+		<div class="gap"></div>
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <i class="icon-cloud icon-medium icon-rounded" style="background-color: #0099FF"></i>
+                    </div>
+                    <div class="media-body">
+                        <p class="lead" style="font-family: 'Fjalla One'">Video Promocional</p>
+                        <div class="row" style="margin-top: 3%">
+                    <div class="span6">
+                        <iframe width="350" height="180" src="https://www.youtube.com/embed/D45pG6v9wrQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+			
+</section>
+<section id = "adiestramiento" class="main" style="background-color: #ffffff">
+<style>
+p {
+  font-size:14px;
+}
+
+
+</style>
+<hr></hr>
+    <div class="container">
+	<br/><br/><br/><br/><br/><br/>
+        <div class="span4">
+                 <div class="media">
+					<br/>
+                    <img src = "images/SoftwareExpress/adiestramientoce.jpg" class="img-rounded imagenes">
+                 </div>
+		</div>	
+        
+		<div class="row-fluid">
+		    <div class="media">
+                <div class = "container">
+				<br/>
+                    <h4 style="text-indent: 2%">Adiestramiento Condominio Express</h4>
+					<br/>
+                    <p  p style="text-indent: 2%">Con el firme objetivo de agilizar la puesta en marcha del sistema, ofrecemos un adiestramiento </p>
+                    <p  p style="text-indent: 2%">para los usuarios, en el que podrán aprender el sencillo manejo de los distinto módulos que  </p>
+                    <p  p style="text-indent: 2%">lo conforman.</p>
+					<p  p style="text-indent: 2%">El adiestramiento cubre todos los conceptos básicos para el manejo de un condominio y toda la </p>
+					<p  p style="text-indent: 2%">parte operativa para la carga de la configuración, movimientos de cuentas por cobrar, cuentas </p>
+                    <p  p style="text-indent: 2%">por pagar, facturación, manejo de fondos, bancos y proveedores.</p>
+					<br/>
+			    </div>
+            </div>
+		</div>
+	</div>	
+	<div class="container">
+       <div class="span4">
+                 <div class="media">
+					<br/>
+                    <img src = "images/SoftwareExpress/cargainicial.jpg" class="img-rounded imagenes">
+                 </div>
+		</div>	
+        
+		<div class="row-fluid">
+		    <div class="media">
+                <div class = "container">
+				<br/>
+                    <h4 style="text-indent: 2%">Carga inicial de datos</h4>
+					<br/>
+                    <p p style="text-indent: 2%">Ofrecemos un servicio adicional para la carga de saldos iniciales y la configuración</p>
+                    <p p style="text-indent: 2%">del sistema, como paso previo al ingreso de las primeras operaciones.</p>
+					<p p style="text-indent: 2%">La carga se realiza en forma automatizada, con base a la información suministrada por </p>
+                    <p p style="text-indent: 2%">el cliente, con los datos del condominio, propiedades, inmuebles, bancos, cuentas, </p>
+					<p p style="text-indent: 2%">proveedores, saldos iniciales de los propietarios, logo y parametros de funcionamiento.</p>
+                    <br/>
+			    </div>
+            </div>
+		</div>
+	</div>	
+   
+</section>
+
+
+
+
+<section id = "pruebaGratuita" class="main" style="background-color: #ffffff">
+
+    <div class="container">
+
+	<br/><br/><br/><br/><br/>
+        <h3 class = "margin center tituloProductos" style="font-family: 'Fjalla One'">Condominio Express, prueba gratuita!</h3>
+        <div class="row-fluid">
+		     <div class="span4">
+                 <div class="media">
+					<br/>
+                    <img src = "images/SoftwareExpress/prueba.jpg" class="img-rounded imagenes">
+                 </div>
+			</div>	 
+            <div class="media">
+                <div class = "container">
+                    <p p style="text-indent: 2%">Le invitamos a realizar un recorrido y uso del sistema Condominio Express, totalmente gratuito, </p>
+                    <p p style="text-indent: 2%">sin compromiso, donde podrá crear todos lo componentes de uno o varios condominios, cargar y</p>
+					<p p style="text-indent: 2%">visualizar sus datos, efectuar transacciones y emitir reportes.</p>
+                    <p p style="text-indent: 2%">Nuestro objetivo es que use el sistema por un tiempo determinado,a fin de que pueda apreciar  </p>
+                    <p p style="text-indent: 2%">el gran alcance de sus funcionalidades y la sencillez de su operación. ¡Adelante! </p>
+					<p p style="text-indent: 2%"></p>
+					<p p style="text-indent: 2%">¡Disfrute del recorrido!</p>
+					<p p style="text-indent: 2%">Haga su solicitud y le facilitaremos una suscripción temporal gratuita por 15 días.</p>
+					
+                </div>
+            </div>
+        </div>
+       
+		<br/>
+        <div class="row-fluid center">
+		    <a class="btn btn-default" href="https://condominioexpressve.com:8181/CondominioExpressPrueba/faces/BienvenidaUI.xhtml" role="button" style="color: #FF0000">Ir a Prueba</a>
+		</div>
+ 	</div>
+</section>
+
+<!--Bottom-->
+
+<div class = "container">
+
+		<div class="row-fluid">
+		    <div class="media">
+                <div class = "container">
+					<br/>
+                    <h4 style="text-indent: 2%">Enlaces de interés en nuestro Blog Condominio Express</h4>
+				
+					<div class="span5 cp">
+                		<li><a  href="https://wp.me/paceRV-4b">Condominio en dólares</a></li>
+						<li><a  href="https://wp.me/paceRV-2y">¿Son ilegales las cuotas especiales en los Condominios?</a></li>
+						<li><a  href="https://wp.me/paceRV-18">Cobranza de intereses de mora</a></li>
+						<li><a  href="https://wp.me/paceRV-U">Balance de la gestión mensual</a></li>
+					</div>
+					<div class="span5 cp">
+                		<li><a  href="https://wp.me/paceRV-at">Ley de Propiedad Horizontal</a></li>
+						<li><a  href="https://wp.me/paceRV-9g">Funciones del Administrador del condominio</a></li>
+						<li><a  href="https://wp.me/paceRV-7b">Hojas de cálculo Vs. Sistemas de información en la nube</a></li>
+						<li><a  href="https://wp.me/paceRV-72">Condominios y coronavirus</a></li>
+					</div>
+					<div class="span5 cp">
+                		<li><a  href="https://wp.me/paceRV-6f">Consulta Express</a></li>
+						<li><a  href="https://wp.me/paceRV-2y">Confiar en un sistema en la nube ¿Por qué?</a></li>
+						<li><a  href="https://wp.me/paceRV-5W ">Condominio Express detrás del escenario</a></li>
+						<li><a  href="https://wp.me/paceRV-55">Avíso de cobro, Condominio Express</a></li>
+					</div>
+					<div class="span5 cp">
+                		<li><a  href="https://wp.me/paceRV-4q">Administradoras, Autogestión y Administración Express</a></li>
+						<li><a  href="https://wp.me/paceRV-3T">Gastos comunes oridinarios</a></li>
+						<li><a  href="https://wp.me/paceRV-41">Gastos comunes Extraordinarios</a></li>
+						<li><a  href="https://wp.me/paceRV-28">Fondo de Reserva en los condominios</a></li>
+					</div>
+					
+				</div>
+            </div>
+		</div>
+            
+ </div>
+ <br/>
+<!--Footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span5 cp">
+                <a target="_blank">&copy; 2016 Software Express0, C.A. - Todos los derechos reservados.</a>
+            </div>
+            <!--/Copyright-->
+
+            <div class="span6">
+                <ul class="social pull-right">
+                    <li><h4 target="_blank">Redes Sociales:</h4></li>
+                    <li><a href="https://www.facebook.com/Software-Express-CA-175079929364314/?fref=ts"><i class="icon-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/SoftwareExpres"><i class="icon-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCQTNJuCz2ezkBJ4_Azl6eJA"><i class="icon-youtube"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="span1">
+                <a id="gototop" class="gototop pull-right" href="#"><i class="icon-angle-up"></i></a>
+            </div>
+            <!--/Goto Top-->
+        </div>
+    </div>
+</footer>
+<!--/Footer-->
+
+<script src="js/vendor/jquery-1.9.1.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<!-- Required javascript files for Slider -->
+<script src="js/jquery.ba-cond.min.js"></script>
+<script src="js/jquery.slitslider.js"></script>
+<!-- /Required javascript files for Slider -->
+
+<!-- SL Slider -->
+<script type="text/javascript">
+$(function() {
+    var Page = (function() {
+
+        var $navArrows = $( '#nav-arrows' ),
+        slitslider = $( '#slider' ).slitslider( {
+            autoplay : true
+        } ),
+
+        init = function() {
+            initEvents();
+        },
+        initEvents = function() {
+            $navArrows.children( ':last' ).on( 'click', function() {
+                slitslider.next();
+                return false;
+            });
+
+            $navArrows.children( ':first' ).on( 'click', function() {
+                slitslider.previous();
+                return false;
+            });
+        };
+
+        return { init : init };
+
+    })();
+
+    Page.init();
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a#navBarScrollSpy").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+});
+</script>
+<!-- /SL Slider -->
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/541169005136?text=Hola%20Software%20Express" target="_blank" class="whatsapp-button" title="¡Contáctenos por WhatsApp!">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="white" class="whatsapp-icon">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+</a>
+
+</body>
+</html>

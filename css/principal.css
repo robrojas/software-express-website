@@ -1,0 +1,47 @@
+.margin {
+  margin-top: 6%;
+}
+
+.logoMargin {
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+
+.navBarMargin {
+    margin-top: 1%;;
+}
+
+.beneficiosProductos {
+    text-indent: 5%;
+    font-size: 130%;
+    font-family: "Fjalla One"
+
+}
+
+.tituloProductos {
+    color: #FF0000;
+    font-family: "Fjalla One"
+}
+.tituloServicios {
+    color: #000000;
+    font-family: "Fjalla One"
+}
+
+.imagenesProductos {
+    width: 80%;
+}
+
+.contacto {
+    font-family: "Fjalla One";
+    color: #ffffff;
+    background-color: #181818
+}
+
+a:hover, a:focus {
+    color: #0099FF !important;
+}
+
+li.active a {
+    color: #ffffff !important;
+    background-color: #0099FF !important;
+}
